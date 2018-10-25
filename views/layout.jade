@@ -1,0 +1,40 @@
+include ./mixins.jade
+doctype html
+html
+  head
+    title='Brad Lubman'
+    meta(name='viewport' content='width=device-width')
+    meta(name='description' content='Brad Lubman, conductor/composer, is one of the foremost conductors of modern music and a leading figure in the field for over two decades.')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://npmcdn.com/contentful@3.3.5/browser-dist/contentful.js')
+    script(src='https://npmcdn.com/marked@0.3.5/marked.min.js')
+    script(src='scripts/main.js')
+  body
+    header.header
+      .coverImage
+        .container.logo
+          h1 Brad Lubman
+          figcaption Photo by Domizia Salusest
+      .container
+        ul#mainNav
+          li
+            a(href='#news') News
+          li
+            a(href='#about') About
+          li
+            a(href='#events') Events
+          li
+            a(href='#listen') Recordings
+          li
+            a(href='#video') Video
+          li
+            a(href='#contact') Contact
+    
+    main
+      .container
+          block content
+    
+    footer#contact
+      .container
+        span 2018 Brad Lubman
