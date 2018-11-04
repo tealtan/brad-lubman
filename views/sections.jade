@@ -70,9 +70,17 @@ block content
       //- div.drawerContents!= md(about.text)
       
       .sidebar
-        img(src='/images/mixtape.jpg' style='margin-bottom: 5px; width: 100%;')
-        p
-          a(href='https://open.spotify.com/artist/48L7jI4tb5zi989IWlLGCS' style='font-size: 13px; text-transform: uppercase;') Occasional mixtapes by Brad →
+        .socialButtons
+          a(href='https://www.instagram.com/bradlubman')
+            img(src='images/icon-instagram.png')
+          a(href='https://open.spotify.com/artist/48L7jI4tb5zi989IWlLGCS')
+            img(src='images/icon-spotify.png')
+          a(href='https://itunes.apple.com/us/artist/brad-lubman/75054416')
+            img(src='images/icon-applemusic.png')
+        a(href='https://open.spotify.com/artist/48L7jI4tb5zi989IWlLGCS')
+          img(src='/images/mixtape.jpg' style='margin-bottom: 10px; width: 100%;')
+        span(style='display: initial; font-size: 12px; line-height: 1.3; text-transform: uppercase;')
+          a(href='https://open.spotify.com/artist/48L7jI4tb5zi989IWlLGCS') Occasional mixtapes made by Brad →
 
   section#events
     h2.sectionName Events
