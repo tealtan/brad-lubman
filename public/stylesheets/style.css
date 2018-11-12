@@ -666,17 +666,58 @@ figcaption {
 
 /* Footer */
 
+footer {
+  background-color: #000;
+}
+
 footer .container {
   padding: 20px 15px;
+}
+
+footer .contact-container {
+  padding: 0 15px;
+}
+
+footer .sectionName {
+  color: #fff;
+  border-top: 5px solid #fff;
+}
+
+footer iframe {
+  border: none;
 }
 
 @media screen and (min-width: 1024px) {
   footer .container {
     padding: 20px 0;
   }
+  footer .contact-container {
+    padding: 0;
+  }
+  footer .side {
+    width: 440px;
+  }
+  footer .form {
+    width: 500px;
+  }
+}
+
+footer h3 {
+  display: inline-block;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'gtam-standard';
+}
+
+footer p {
+  color: #fff;
 }
 
 footer span {
-  font-size: 12px;
-  color: #999;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
 }
