@@ -111,7 +111,7 @@ header .logo figcaption {
     display: flex;
     justify-content: flex-start;
     margin: 0 auto 45px 0;
-    border-top: 10px solid #000;
+    /* border-top: 5px solid #000; */
   }
 
   #mainNav li { list-style: none; }
@@ -680,7 +680,7 @@ footer .contact-container {
 
 footer .sectionName {
   color: #fff;
-  border-top: 5px solid #fff;
+  /* border-top: 5px solid #fff; */
 }
 
 footer iframe {
