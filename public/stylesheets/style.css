@@ -523,7 +523,7 @@ figcaption {
 /* Gallery */
 
 #gallery {
-  height: 215px;
+  height: 310px;
 }
 
 .galleryWindow {
@@ -550,7 +550,7 @@ figcaption {
 }
 
 @media screen and (min-width: 0px) {
-  #gallery { height: 540px; }
+  #gallery { height: 635px; }
   .galleryWindow { height: 420px; }
   /* .galleryContainer { padding: 0 20px; } */
   #gallery img { height: 420px; }
