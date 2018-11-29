@@ -20,7 +20,7 @@ block content
       - return fields.multipleDates
     - else
       - var [year, month, day] = fields.date.split('-')
-      - return monthName[Number(month)-1] + ' ' + day + ', ' + year
+      - return monthName[Number(month)-1] + ' ' + parseInt(day) + ', ' + year
   - }
 
   mixin renderEvents(eventsList)
