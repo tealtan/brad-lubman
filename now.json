@@ -2,10 +2,9 @@
   "version": 2,
   "builds": [
     { "src": "/public/*", "use": "@now/static" },
-    { "src": "package.json", "use": "@now/node" }
+    { "src": "app.json", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/public/(.*)", "dest": "/static/$1" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/", "dest": "app.json" }
   ]
 }
