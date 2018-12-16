@@ -78,7 +78,7 @@ h3 {
 
 header .logo {
   margin: 0 auto;
-  border-top: 10px solid #fff;
+  /* border-top: 10px solid #fff; */
   width: 100%;
   padding-top: 15px;
 }
@@ -693,6 +693,14 @@ footer .sectionName {
 
 footer iframe {
   border: none;
+  overflow: hidden;
+  width: calc(100% - 60px);
+}
+
+@media screen and (min-width: 1024px) {
+  footer iframe {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
