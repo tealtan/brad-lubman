@@ -2,6 +2,7 @@
     "version": 2,
     "name": "brad-v2-test",
     "builds": [
-        { "src": "app.js", "use": "@now/node" }
+        { "src": "app.js", "use": "@now/node" },
+        { "src": "public/*.*", "use": "@now/static" }
     ]
 }
