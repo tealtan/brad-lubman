@@ -12,7 +12,6 @@
     "accessToken": "44f2b286e394198df930d60481ade424c2fead723f88767b154e1ce4ef560bcf",
     "space": "8730t1z03k68"
   },
-  "engines": { "node": "12.x" },
   "dependencies": {
     "body-parser": "~1.15.1",
     "compression": "^1.7.4",
