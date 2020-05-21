@@ -12,7 +12,7 @@ function renderEvents(events) {
 // Load events in a year
 function loadEventsInYear(year) {
   contentfulClient.getEntries({
-    content_type: 'events',
+    content_type: 'event',
     'fields.date[lte]': (year+1)+'-01-01T00:00:00Z',
     'fields.date[gte]': year+'-01-01T00:00:00Z',
     order: 'fields.date'
@@ -23,8 +23,19 @@ function loadEventsInYear(year) {
 }
 
 var currentYear = (new Date()).getFullYear();
-var nextYear = currentYear + 1;
 var previousYear = currentYear - 1;
+
+// Load events in the current season
+// contentfulClient.getEntries({
+//   content_type: 'events',
+//   'fields.date[lte]': currentYear+'-01-01T00:00:00Z',
+//   'fields.date[gte]': previousYear+'-08-01T00:00:00Z',
+//   order: 'fields.date'
+// })
+// .then(function(entries) {
+//   $('.eventsContainer #eventSpan-'+previousYear).html(renderEvents(entries.items));
+//   loadEventsInYear(currentYear);
+// })
 
 var monthName = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.']
 
@@ -33,7 +44,7 @@ function formatEventDate(fields) {
     return fields.multipleDates
   else
     var [year, month, day] = fields.date.split('-')
-    return monthName[Number(month)-1] + ' ' + day + ', ' + year
+    return monthName[Number(month-1)] + ' ' + parseInt(day, 10) + ', ' + year
 }
 
 function formatEventURL(url) {
@@ -52,12 +63,14 @@ function renderSingleEvent(event) {
         formatEventDate(fields) +
       '</span>' +
       '<div class="eventHeadline">' +
-        '<span class="eventName">' +
+        '<div class="eventName">' +
           fields.name +
-        '</span>' +
-        '<span class="eventLocation">' +
+          ' • ' +
           fields.location +
-        '</span>' +
+        '</div>' +
+        '<div class="eventEnsemble">' +
+          fields.ensemble +
+        '</div>' +
       '</div>' +
       '<div class="drawerToggle"></div>' +
     '</div>' +
@@ -70,14 +83,8 @@ function renderSingleEvent(event) {
 
 $(function() {
 
-  $('.pastEvents').on('click', function() {
-    event.preventDefault();
-    var selectedYear = $(this).data('year');
-    loadEventsInYear(selectedYear);
-
-    var pos = $('#eventSpan-'+selectedYear).offset();
-    $('body').animate({ scrollTop: pos.top - 30 });
-  });
+  loadEventsInYear(currentYear);
+  loadEventsInYear(previousYear);
 
   $('body').on('click', '.drawer', function() {
     $(this).toggleClass('drawerClosed');
