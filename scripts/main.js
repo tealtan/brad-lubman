@@ -83,8 +83,8 @@ function renderSingleEvent(event) {
 
 $(function() {
 
-  loadEventsInYear(currentYear);
-  loadEventsInYear(previousYear);
+  // loadEventsInYear(currentYear);
+  // loadEventsInYear(previousYear);
 
   $('body').on('click', '.drawer', function() {
     $(this).toggleClass('drawerClosed');
