@@ -8,8 +8,8 @@ export default function SectionAbout() {
       <Container>
         <Section>
           <SectionHeader text="About" id="about"/>
-          <div class="flex">
-            <div class="drawerContents">
+          <div className="flex">
+            <div className="drawerContents">
               <p>
                 Brad Lubman, conductor/composer, is one of the foremost
                 conductors of modern music and a leading figure in the field for
