@@ -9,13 +9,30 @@ import SectionVideos from "../components/sections/SectionVideos";
 import SectionGallery from "../components/sections/SectionGallery";
 import Footer from "../components/Footer";
 
-export default function Index() {
+import client from '../sanityClient'
+
+export async function getStaticProps({params}) {
+    const sectionsData = await client.getDocuments(['sectionAbout'])
+
+    // const sectionsData = await Client().getByIDs(["YbbGOREAACIADkC6", "YcDrWBAAACMAr-8o"])
+    // const eventsData = await Client().getByType("event")
+
+    return {
+      props: {
+        // eventsData,
+        sectionsData
+      },
+    }
+}
+
+export default function Index(response) {
   return (
     <>
       <Meta />
 
       <SectionTop />
-      <SectionAbout />
+      {/* <SectionAbout {...response.sectionsData} /> */}
+      <SectionAbout {...response.sectionsData[0]} />
       <SectionEvents />
       <SectionRecordings />
       <SectionVideos />
@@ -184,7 +201,7 @@ export default function Index() {
             justify-content: space-between;
           }
           .sidebar {
-            width: 220px;
+            width: 240px;
           }
         }
 
