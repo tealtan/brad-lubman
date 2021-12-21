@@ -1,12 +1,6 @@
 {
   "version": 2,
   "name": "bradlubman-next",
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/web/"
-    }
-  ],
   "builds": [
     { "src": "web/next.config.js", "use": "@now/next" }
   ]
