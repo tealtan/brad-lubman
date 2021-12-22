@@ -1,0 +1,5 @@
+# Ignore build artifacts
+.next
+
+# Ignore sanity cms
+sanity
