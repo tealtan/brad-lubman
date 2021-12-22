@@ -1,4 +1,4 @@
-import Container from "../Container";
+import Container from '../Container'
 
 export default function SectionTop() {
   return (
@@ -14,12 +14,24 @@ export default function SectionTop() {
         </div>
         <Container>
           <ul id="mainNav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#recordings">Recordings</a></li>
-            <li><a href="#video">Video</a></li>
-            <li><a href="#photos">Photos</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#events">Events</a>
+            </li>
+            <li>
+              <a href="#recordings">Recordings</a>
+            </li>
+            <li>
+              <a href="#video">Video</a>
+            </li>
+            <li>
+              <a href="#photos">Photos</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </Container>
       </header>
@@ -28,7 +40,7 @@ export default function SectionTop() {
 
         .coverImage {
           position: relative;
-          background-image: url("/images/bg.jpg");
+          background-image: url('/images/bg.jpg');
           background-size: cover;
           background-position: center center;
           width: 100%;
@@ -104,5 +116,5 @@ export default function SectionTop() {
         }
       `}</style>
     </>
-  );
+  )
 }

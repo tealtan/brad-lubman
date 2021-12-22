@@ -3,7 +3,7 @@ import BlockContent from '@sanity/block-content-to-react'
 
 function formatDate(date) {
   if (!date) {
-    return null;
+    return null
   }
 
   const monthNames = [
@@ -18,7 +18,7 @@ function formatDate(date) {
     'Sep.',
     'Oct.',
     'Nov.',
-    'Dec.'
+    'Dec.',
   ]
   const month = monthNames[Number(date.substr(5, 2)) - 1]
   const day = Number(date.substr(8, 2))
@@ -29,7 +29,7 @@ function formatDate(date) {
 class Event extends React.Component {
   state = {
     events: [],
-    drawerHidden: true
+    drawerHidden: true,
   }
 
   componentDidMount() {
@@ -39,7 +39,7 @@ class Event extends React.Component {
 
   toggleDrawer() {
     this.setState({
-      drawerHidden: !this.state.drawerHidden
+      drawerHidden: !this.state.drawerHidden,
     })
     console.log(this.state.drawerHidden)
   }
@@ -48,7 +48,9 @@ class Event extends React.Component {
     return (
       <>
         <div
-          className= {`event drawer ${this.state.drawerHidden ? "drawerClosed" : ""}`}
+          className={`event drawer ${
+            this.state.drawerHidden ? 'drawerClosed' : ''
+          }`}
           onClick={this.toggleDrawer.bind(this)}
         >
           <div className="eventHead">
@@ -59,7 +61,11 @@ class Event extends React.Component {
               <span className="eventName">{this.props.title}</span>
               <span className="eventLocation">{this.props.location}</span>
             </div>
-            <div className={`drawerToggle ${this.state.drawerHidden ? "drawerClosed" : ""}`} />
+            <div
+              className={`drawerToggle ${
+                this.state.drawerHidden ? 'drawerClosed' : ''
+              }`}
+            />
           </div>
           {!this.state.drawerHidden && (
             <div className="eventDetails drawerContents">
@@ -68,7 +74,9 @@ class Event extends React.Component {
                 imageOptions={{ w: 750, fit: 'max' }}
               />
               {this.props.url && (
-                <p><a href={this.props.url}>Learn More</a></p>
+                <p>
+                  <a href={this.props.url}>Learn More</a>
+                </p>
               )}
             </div>
           )}
@@ -173,12 +181,13 @@ class Event extends React.Component {
             }
           }
         `}</style>
-        <style global jsx>{`
-          .event .eventDetails div p {
-            margin-bottom: 0;
-            min-height: 1.5rem;
-          }
-        `}
+        <style global jsx>
+          {`
+            .event .eventDetails div p {
+              margin-bottom: 0;
+              min-height: 1.5rem;
+            }
+          `}
         </style>
       </>
     )

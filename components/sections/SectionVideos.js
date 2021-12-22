@@ -1,6 +1,6 @@
-import Container from "../Container";
-import Section from "./Section";
-import SectionHeader from "../SectionHeader";
+import Container from '../Container'
+import Section from './Section'
+import SectionHeader from '../SectionHeader'
 
 export default function SectionListen() {
   return (
@@ -153,5 +153,5 @@ export default function SectionListen() {
         }
       `}</style>
     </>
-  );
+  )
 }
