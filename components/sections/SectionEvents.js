@@ -8,14 +8,9 @@ import Event from '../Event'
 class SectionEvents extends React.Component {
   state = { events: [] }
 
-  // client = contentful.createClient({
-  //   space: 'iyieuwr67lde',
-  //   accessToken:
-  //     '9b3f98f7a8648b0c76f7f43338b478be21b2b2cb13b7d1b1d81488de3ce2d3b3'
-  // })
-
   componentDidMount() {
     // this.fetchEventsFromCurrentSeason().then(this.setEvents)
+    this.setEvents()
   }
 
   fetchEventsFromCurrentSeason() {
@@ -37,7 +32,8 @@ class SectionEvents extends React.Component {
   }
 
   setEvents = (response) => {
-    this.setState({ events: response.items })
+    const eventsArray = Object.values(this.props)
+    this.setState({ events: eventsArray })
     // console.log(response.items)
   }
 
@@ -49,15 +45,12 @@ class SectionEvents extends React.Component {
             <SectionHeader text="Events" id="events"/>
             <div>
               {this.state.events.map((event) => (
-                <Event
-                  key={event.fields.slug}
-                  date={event.fields.date}
-                  dateString={event.fields.multipleDates}
-                  name={event.fields.name}
-                  location={event.fields.location}
-                  description={event.fields.description}
-                  url={event.fields.url}
-                />
+                <>
+                  <Event
+                    key={event._id}
+                    {...event}
+                  />
+                </>
               ))}
             </div>
           </Section>

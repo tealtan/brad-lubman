@@ -1,9 +1,11 @@
 import React from 'react'
-import Markdown from 'react-markdown'
-import rehypeRaw from 'rehype-raw'
-import rehypeSanitize from 'rehype-sanitize'
+import BlockContent from '@sanity/block-content-to-react'
 
 function formatDate(date) {
+  if (!date) {
+    return null;
+  }
+
   const monthNames = [
     'Jan.',
     'Feb.',
@@ -24,14 +26,15 @@ function formatDate(date) {
   return month + ' ' + day + ', ' + year
 }
 
-function fixNewLines(string) {
-  return string.replace(/(^|[^\n])\n(?!\n)/g, '$1<br />')
-}
-
 class Event extends React.Component {
   state = {
     events: [],
     drawerHidden: true
+  }
+
+  componentDidMount() {
+    // this.fetchEventsFromCurrentSeason().then(this.setEvents)
+    console.log(this.props)
   }
 
   toggleDrawer() {
@@ -54,19 +57,19 @@ class Event extends React.Component {
               {this.props.dateString || formatDate(this.props.date)}
             </span>
             <div className="eventHeadline">
-              <span className="eventName">{this.props.name}</span>
+              <span className="eventName">{this.props.title}</span>
               <span className="eventLocation">{this.props.location}</span>
             </div>
             <div className={`drawerToggle ${this.state.drawerHidden ? "drawerClosed" : ""}`} />
           </div>
           {!this.state.drawerHidden && (
             <div className="eventDetails drawerContents">
-              <Markdown rehypePlugins={[rehypeRaw, rehypeSanitize]} children={fixNewLines(this.props.description) || ''}>
-              </Markdown>
+              <BlockContent
+                blocks={this.props.description}
+                imageOptions={{ w: 750, fit: 'max' }}
+              />
               {this.props.url && (
-                <p>
-                  <a href="' + {this.props.url} + '">Learn More</a>
-                </p>
+                <p><a href={this.props.url}>Learn More</a></p>
               )}
             </div>
           )}
@@ -171,6 +174,13 @@ class Event extends React.Component {
             }
           }
         `}</style>
+        <style global jsx>{`
+          .event .eventDetails div p {
+            margin-bottom: 0;
+            min-height: 1.5rem;
+          }
+        `}
+        </style>
       </>
     )
   }

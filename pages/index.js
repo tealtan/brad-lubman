@@ -13,14 +13,12 @@ import client from '../sanityClient'
 
 export async function getStaticProps({params}) {
     const sectionsData = await client.getDocuments(['sectionAbout'])
-
-    // const sectionsData = await Client().getByIDs(["YbbGOREAACIADkC6", "YcDrWBAAACMAr-8o"])
-    // const eventsData = await Client().getByType("event")
+    const eventsData = await client.fetch('*[_type == "event"] | order(date)')
 
     return {
       props: {
-        // eventsData,
-        sectionsData
+        sectionsData,
+        eventsData,
       },
     }
 }
@@ -33,7 +31,7 @@ export default function Index(response) {
       <SectionTop />
       {/* <SectionAbout {...response.sectionsData} /> */}
       <SectionAbout {...response.sectionsData[0]} />
-      <SectionEvents />
+      <SectionEvents {...response.eventsData} />
       <SectionRecordings />
       <SectionVideos />
       <SectionGallery />
