@@ -182,9 +182,15 @@ class Event extends React.Component {
         `}</style>
         <style global jsx>
           {`
-            .event .eventDetails div p {
-              margin-bottom: 0;
-              min-height: 1.5rem;
+            .event .eventDetails p {
+              margin-bottom: 0.3em;
+            }
+            .event .eventDetails p:empty {
+              margin-bottom: 1.5em;
+            }
+            .event .eventDetails p a {
+              display: block;
+              margin-top: 1.5em;
             }
           `}
         </style>
