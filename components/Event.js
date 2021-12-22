@@ -58,8 +58,9 @@ class Event extends React.Component {
               {this.props.dateString || formatDate(this.props.date)}
             </span>
             <div className="eventHeadline">
-              <span className="eventName">{this.props.title}</span>
-              <span className="eventLocation">{this.props.location}</span>
+              <strong>
+                {this.props.title} • {this.props.location}
+              </strong>
             </div>
             <div
               className={`drawerToggle ${
@@ -98,8 +99,7 @@ class Event extends React.Component {
             }
 
             .eventDate,
-            .eventName,
-            .eventLocation {
+            .eventHeadline {
               display: block;
               width: calc(100% - 70px);
             }
@@ -121,7 +121,6 @@ class Event extends React.Component {
           }
 
           .eventName {
-            font-weight: 700;
             display: block;
           }
 
@@ -135,7 +134,7 @@ class Event extends React.Component {
             position: absolute;
             top: 30px;
             right: 15px;
-            background: url('/images/icon-plus-red@2x.png');
+            background: url('/images/icon-plus-black@2x.png');
             background-size: 100%;
           }
 
