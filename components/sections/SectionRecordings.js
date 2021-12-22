@@ -10,10 +10,10 @@ export default function SectionListen() {
           <div className="sidebar">
             <div className="socialButtons">
               <a href="https://open.spotify.com/artist/4avJYrq90FykiapVF7jazJ">
-                <img src="images/icon-spotify.png" />
+                <img alt="Logo for Spotify" src="/images/icon-spotify.png" />
               </a>
               <a href="https://itunes.apple.com/us/artist/ensemble-signal/id583487378">
-                <img src="images/icon-applemusic.png" />
+                <img alt="Logo for Apple Music" src="/images/icon-applemusic.png" />
               </a>
             </div>
           </div>
@@ -22,7 +22,7 @@ export default function SectionListen() {
 
           <div className="albums">
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.contentful.com/iyieuwr67lde/3WJ2I4NNDOU02sS6eOU8mq/d09227374ea00c753d70edd7b066594e/album_1.png"
               />
               <div className="albumLinks">
@@ -38,7 +38,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.contentful.com/iyieuwr67lde/329SUV7fQIQuQi8wemq6Qc/a889fb73686f0a1e89b793f9b0e2d1d7/album_2.png"
               />
               <div className="albumLinks">
@@ -54,7 +54,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.contentful.com/iyieuwr67lde/32zvOsYLKwYCSUIgCuWGwO/64e17e9e985f95ca7c081e9c70950a2a/album_4.png"
               />
               <div className="albumLinks">
@@ -69,7 +69,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.contentful.com/iyieuwr67lde/po9bwBr5F6WkSa4SyAeYa/81ccb08a2fbca802ff646b695ac076ee/album_3.png"
               />
               <div className="albumLinks">
@@ -88,7 +88,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/3dAosFp4py82g6oY884QUm/828dc8a2dfefd9e9cc7b3b8fe1a75d56/album-01.jpg"
               />
               <div className="albumLinks">
@@ -104,7 +104,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/4DkCIKMnbaC8eGiWe6EUoW/c09315bf714522757e1870a0f2d52dbf/album-02.jpg"
               />
               <div className="albumLinks">
@@ -120,7 +120,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/2TesuMY0rYeUCC6e2yYK6C/cd8e9ac7e3cae6aca1b148a71a14c17c/album-03.jpg"
               />
               <div className="albumLinks">
@@ -136,7 +136,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/5JLtPLJMpUq6scCCK8Ks4W/1d42eae262af9076c374263dfa7a9351/album-04.jpg?h=250"
               />
               <div className="albumLinks">
@@ -152,7 +152,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/5sG6VicwJGGGuyaa0wi2Go/296a32261560243f3b6dc2ed1143a138/album-05.jpg"
               />
               <div className="albumLinks">
@@ -168,7 +168,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/53Qyw1yGMweUScQGoeSMEq/bceea2ca1416da050b76437c3939eebf/album-06.jpg"
               />
               <div className="albumLinks">
@@ -184,7 +184,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/67tIAcm2B2w6GAYgkY22c/f77f1f7dd9f7aabb1be2dba6889a5147/album-07.jpg"
               />
               <div className="albumLinks">
@@ -200,7 +200,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/2rmWNg9K12wqEgqg0KEYeE/70bb6c926111ce0d0f3fc7f309f63677/album-08.jpg"
               />
               <div className="albumLinks">
@@ -216,7 +216,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/3o5LTFYrvagmwY8SSGsYuC/1ba3ec86b6d676d7c01f1f582bffac00/album-09.jpg"
               />
               <div className="albumLinks">
@@ -232,7 +232,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.contentful.com/iyieuwr67lde/26zuG4GUQ4q8cWGgAyCAMa/fa5a13fc2a58c8d1237518b3a3a84fa1/album_5.png"
               />
               <div className="albumLinks">
@@ -243,7 +243,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/6K8WNKjtjGYYSgIUQuYA0s/8f7ff4efdddc9cb414b57a9e86f6fb6a/album-10.jpg"
               />
               <div className="albumLinks">
@@ -259,7 +259,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.contentful.com/iyieuwr67lde/1uOQwNf9neQqkugGmWKucq/a52d407cb1ea01b0b101ae136edfc2fe/album_6.png"
               />
               <div className="albumLinks">
@@ -275,7 +275,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/35Gm17ZSmAOQe0wA62UykI/8d235dfc87f69eb73c0566cc3ee9546e/album-11.jpg"
               />
               <div className="albumLinks">
@@ -291,7 +291,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/1Xg8K7LKTWS6wK0u4as4EM/9aba8cdbd4072cea4bb20b4086b9286c/album-12.jpg"
               />
               <div className="albumLinks">
@@ -307,7 +307,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.contentful.com/iyieuwr67lde/4Ukf68pmPSUw6GMw44AYwm/a65f4087ce85f9a7816a0b4c44fd7d01/album_7.png"
               />
               <div className="albumLinks">
@@ -321,7 +321,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.contentful.com/iyieuwr67lde/1GF3oMJ7dqGgCIiiUgQ0gy/becc0439b2eefcc8aa6127e51b387f36/album_8.png"
               />
               <div className="albumLinks">
@@ -337,7 +337,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/SN3l17THA2G2W2Gq6GWm4/4918cd795c10598afc33ac68de19dd78/BHM-Lachenmann-2.jpg"
               />
               <div className="albumLinks">
@@ -345,7 +345,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/1mntaX3Rx2qmmWYOAo4umG/bff92ce47939cf433512343bc7fb3798/BHM-Lachenmann-3.jpg"
               />
               <div className="albumLinks">
@@ -353,7 +353,7 @@ export default function SectionListen() {
               </div>
             </div>
             <div className="album">
-              <img
+              <img alt=""
                 src="https://images.ctfassets.net/8730t1z03k68/15IdkFEt2OyyuS8oy8aA0m/816941519461d0c253ea5a7c43483aaa/Noturrno.jpg"
               />
               <div className="albumLinks">

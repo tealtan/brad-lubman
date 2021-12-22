@@ -48,7 +48,6 @@ class Event extends React.Component {
     return (
       <>
         <div
-          ref="drawer"
           className= {`event drawer ${this.state.drawerHidden ? "drawerClosed" : ""}`}
           onClick={this.toggleDrawer.bind(this)}
         >
