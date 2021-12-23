@@ -8,7 +8,7 @@ import BlockContent from '@sanity/block-content-to-react'
 
 class SectionAbout extends React.Component {
   componentDidMount() {
-    console.log(this.props)
+    // console.log(this.props)
   }
 
   render() {

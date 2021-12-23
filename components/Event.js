@@ -34,7 +34,7 @@ class Event extends React.Component {
 
   componentDidMount() {
     // this.fetchEventsFromCurrentSeason().then(this.setEvents)
-    console.log(this.props)
+    // console.log(this.props)
   }
 
   toggleDrawer() {
