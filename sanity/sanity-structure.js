@@ -6,14 +6,18 @@ export default () =>
     .items([
       S.listItem()
         .title('About Section')
-        .child(
-          S.editor()
-            .schemaType('sectionAbout')
-            .documentId('sectionAbout')
-        ),
-      // Add a visual divider (optional)
+        .child(S.editor().schemaType('sectionAbout').documentId('sectionAbout')),
+      S.listItem()
+        .title('Recordings Section')
+        .child(S.editor().schemaType('sectionRecordings').documentId('sectionRecordings')),
+
       S.divider(),
-      // List out the rest of the document types, but filter out the config type
+
+      // List out the rest of the document types, but filter out the section types above
       ...S.documentTypeListItems()
-        .filter(listItem => !['sectionAbout'].includes(listItem.getId()))
+        .filter(listItem => ![
+          'sectionAbout',
+          'sectionRecordings'
+        ]
+        .includes(listItem.getId()))
     ])

@@ -7,7 +7,11 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent'
 
 import sectionAbout from './sectionAbout'
+import sectionRecordings from './sectionRecordings'
+
 import event from './event'
+import recording from './recording'
+import recordingLink from './recordingLink'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,6 +23,9 @@ export default createSchema({
     blockContent,
 
     sectionAbout,
+    sectionRecordings,
+
     event,
+    recording, recordingLink
   ]),
 })
