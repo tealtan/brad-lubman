@@ -15,8 +15,12 @@ export async function getStaticProps({ params }) {
   const sectionsData = await client.getDocuments(['sectionAbout', 'sectionRecordings'])
   const eventsData = await client.fetch('*[_type == "event"] | order(date)')
 
+  // Hacky way of separately including cover asset urls
+  const sectionRecordings = await client.fetch('*[_type == "sectionRecordings"]{ "coverImages": recordings[].cover.asset->url, ... }')
+
   return {
     props: {
+      sectionRecordings,
       sectionsData,
       eventsData,
     },
@@ -32,7 +36,8 @@ export default function Index(response) {
       {/* <SectionAbout {...response.sectionsData} /> */}
       <SectionAbout {...response.sectionsData[0]} />
       <SectionEvents {...response.eventsData} />
-      <SectionRecordings {...response.sectionsData[1]} />
+      {/* <SectionRecordings {...response.sectionsData[1]} /> */}
+      <SectionRecordings {...response.sectionRecordings[0]} />
       <SectionVideos />
       <SectionGallery />
       <Footer />

@@ -10,12 +10,12 @@ class Recording extends React.Component {
       <>
         <div className="album">
           <img
-            alt=""
-            src="https://images.contentful.com/iyieuwr67lde/329SUV7fQIQuQi8wemq6Qc/a889fb73686f0a1e89b793f9b0e2d1d7/album_2.png"
+            alt={this.props.title}
+            src={this.props.coverImageUrl}
           />
           <div className="albumLinks">
             {Object.values(this.props.links).map((recording) => (
-              <a key="{recording._key}" href="{recording.linkUrl}">
+              <a key="{recording._key}" href={recording.linkUrl}>
                 {recording.linkText}
               </a>
             ))}
