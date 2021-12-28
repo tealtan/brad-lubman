@@ -12,11 +12,16 @@ import Footer from '../components/Footer'
 import client from '../sanityClient'
 
 export async function getStaticProps({ params }) {
-  const sectionsData = await client.getDocuments(['sectionAbout', 'sectionContact'])
+  const sectionsData = await client.getDocuments([
+    'sectionAbout',
+    'sectionContact',
+  ])
   const eventsData = await client.fetch('*[_type == "event"] | order(date)')
 
   // Hacky way of separately including cover asset urls
-  const sectionRecordings = await client.fetch('*[_type == "sectionRecordings"]{ ..., "recordings": recordings[]{ ..., "cover": cover.asset->url } }')
+  const sectionRecordings = await client.fetch(
+    '*[_type == "sectionRecordings"]{ ..., "recordings": recordings[]{ ..., "cover": cover.asset->url } }'
+  )
 
   return {
     props: {

@@ -33,7 +33,9 @@ class Footer extends React.Component {
             </div>
           </Container>
           <Container>
-            <span className='copyright'>{new Date().getFullYear()}, Brad Lubman.</span>
+            <span className="copyright">
+              {new Date().getFullYear()}, Brad Lubman.
+            </span>
           </Container>
         </footer>
 
@@ -75,28 +77,29 @@ class Footer extends React.Component {
             color: #fff;
           }
         `}</style>
-        <style global jsx>{`
-          footer p {
-            color: #fff;
-            margin-bottom: 0;
-          }
+        <style global jsx>
+          {`
+            footer p {
+              color: #fff;
+              margin-bottom: 0;
+            }
 
-          footer iframe {
-            border: none;
-            overflow: hidden;
-            width: calc(100% - 60px);
-          }
-
-          @media screen and (min-width: 1024px) {
             footer iframe {
-              width: 100%;
+              border: none;
+              overflow: hidden;
+              width: calc(100% - 60px);
             }
 
-            footer #form {
-              width: 500px;
+            @media screen and (min-width: 1024px) {
+              footer iframe {
+                width: 100%;
+              }
+
+              footer #form {
+                width: 500px;
+              }
             }
-          }
-        `}
+          `}
         </style>
       </>
     )

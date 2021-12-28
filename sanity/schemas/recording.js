@@ -12,14 +12,14 @@ export default {
       name: 'cover',
       title: 'Cover Image',
       type: 'image',
-	  validation: Rule => Rule.required()
+      validation: Rule => Rule.required()
     },
     {
       title: 'Links',
       name: 'links',
       type: 'array',
       of: [{type: 'recordingLink'}],
-	  options: {
+      options: {
         editModal: 'popover',
       },
     }
