@@ -7,9 +7,9 @@ import SectionHeader from '../SectionHeader'
 import BlockContent from '@sanity/block-content-to-react'
 
 class SectionAbout extends React.Component {
-  componentDidMount() {
-    // console.log(this.props)
-  }
+  // componentDidMount() {
+  //   console.log(this.props)
+  // }
 
   render() {
     return (

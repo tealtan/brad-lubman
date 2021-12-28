@@ -1,9 +1,9 @@
 import React from 'react'
 
 class Recording extends React.Component {
-  componentDidMount() {
-    console.log(this.props)
-  }
+  // componentDidMount() {
+  //   console.log(this.props)
+  // }
 
   render() {
     return (

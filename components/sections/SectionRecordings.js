@@ -6,9 +6,9 @@ import SectionHeader from '../SectionHeader'
 import Recording from '../Recording'
 
 class SectionListen extends React.Component {
-  componentDidMount() {
-    console.log(this.props)
-  }
+  // componentDidMount() {
+  //   console.log(this.props)
+  // }
 
   render() {
     return (
