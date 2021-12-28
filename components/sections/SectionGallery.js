@@ -15,7 +15,7 @@ class SectionGallery extends React.Component {
       <Container>
         <Section>
           <div id="gallery">
-            <SectionHeader text="Photos" id="photos" />
+            <SectionHeader text={this.props.title} id="photos" />
             <div className="galleryWindow">
               <div className="galleryContainer">
                 {Object.values(this.props.images).map((image) => (

@@ -19,7 +19,7 @@ class SectionListen extends React.Component {
               className="sidebar"
               dangerouslySetInnerHTML={{ __html: this.props.sidebar }}
             ></div>
-            <SectionHeader text="Recordings" id="recordings" />
+            <SectionHeader text={this.props.title} id="recordings" />
             <div className="albums">
               {Object.values(this.props.recordings).map((recording, i) => (
                 <Recording key={recording._id} {...recording} />

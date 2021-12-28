@@ -15,7 +15,7 @@ class Footer extends React.Component {
       <>
         <footer id="contact">
           <Container>
-            <SectionHeader text="Contact" id="" color="#fff" />
+            <SectionHeader text={this.props.title} id="" color="#fff" />
             <div className="flex">
               <div className="side">
                 <h3>{this.props.contactHeading}</h3>
