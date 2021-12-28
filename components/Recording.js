@@ -11,7 +11,7 @@ class Recording extends React.Component {
         <div className="album">
           <img
             alt={this.props.title}
-            src={this.props.coverImageUrl}
+            src={this.props.cover}
           />
           <div className="albumLinks">
             {Object.values(this.props.links).map((recording) => (
