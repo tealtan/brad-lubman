@@ -2,7 +2,7 @@ import Container from '../Container'
 import Section from './Section'
 import SectionHeader from '../SectionHeader'
 
-export default function SectionListen() {
+export default function SectionVideos() {
   return (
     <>
       <Container>

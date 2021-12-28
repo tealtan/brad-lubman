@@ -34,7 +34,7 @@ class SectionEvents extends React.Component {
   setEvents = (response) => {
     const eventsArray = Object.values(this.props)
     this.setState({ events: eventsArray })
-    // console.log(response.items)
+    console.log(eventsArray)
   }
 
   render() {
