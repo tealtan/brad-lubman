@@ -10,72 +10,68 @@ class SectionGallery extends React.Component {
   // }
 
   render() {
-  return (
-    <>
-      <Container>
-        <Section>
-          <div id="gallery">
-            <SectionHeader text={this.props.title} id="photos" />
-            <div className="galleryWindow">
-              <div className="galleryContainer">
-                {Object.values(this.props.images).map((image) => (
-                  <img
-                    alt=""
-                    key={image._key}
-                    src={image.url}
-                  />
-                ))}
+    return (
+      <>
+        <Container>
+          <Section>
+            <div id="gallery">
+              <SectionHeader text={this.props.title} id="photos" />
+              <div className="galleryWindow">
+                <div className="galleryContainer">
+                  {Object.values(this.props.images).map((image) => (
+                    <img alt="" key={image._key} src={image.url} />
+                  ))}
+                </div>
               </div>
+              <figcaption>{this.props.photoCredit}</figcaption>
             </div>
-            <figcaption>{this.props.photoCredit}</figcaption>
-          </div>
-        </Section>
-      </Container>
-      <style jsx>{`
-        #gallery {
-          height: 310px;
-        }
-
-        .galleryWindow {
-          /* width: 100vw; */
-          /* position: absolute; */
-          /* left: 0; */
-          overflow-x: scroll;
-          -webkit-overflow-scrolling: touch;
-        }
-
-        .galleryContainer {
-          width: 5000px;
-          /* padding: 0 15px; */
-        }
-
-        #gallery img {
-          float: left;
-          height: 270px;
-          margin-right: 15px;
-        }
-
-        #gallery figcaption {
-          /* margin-top: 160px; */
-        }
-
-        @media screen and (min-width: 0px) {
+          </Section>
+        </Container>
+        <style jsx>{`
           #gallery {
-            height: 635px;
+            height: 310px;
           }
+
           .galleryWindow {
-            height: 420px;
+            /* width: 100vw; */
+            /* position: absolute; */
+            /* left: 0; */
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
           }
-          /* .galleryContainer { padding: 0 20px; } */
+
+          .galleryContainer {
+            width: 5000px;
+            /* padding: 0 15px; */
+          }
+
           #gallery img {
-            height: 420px;
+            float: left;
+            height: 270px;
+            margin-right: 15px;
           }
-          /* #gallery figcaption { margin-top: 435px; } */
-        }
-      `}</style>
-    </>
-  )
-}
+
+          #gallery figcaption {
+            /* margin-top: 160px; */
+          }
+
+          @media screen and (min-width: 0px) {
+            #gallery {
+              height: 635px;
+            }
+            .galleryWindow {
+              height: 420px;
+            }
+            /* .galleryContainer { padding: 0 20px; } */
+            #gallery img {
+              height: 420px;
+            }
+            /* #gallery figcaption { margin-top: 435px; } */
+          }
+        `}</style>
+      </>
+    )
+  }
 }
 
 export default SectionGallery

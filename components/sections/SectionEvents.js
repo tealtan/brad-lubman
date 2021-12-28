@@ -45,7 +45,7 @@ class SectionEvents extends React.Component {
             <SectionHeader text="Events" id="events" />
             <div>
               {this.state.events.map((event) => (
-                  <Event key={event._id} {...event} />
+                <Event key={event._id} {...event} />
               ))}
             </div>
           </Section>
