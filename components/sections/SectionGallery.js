@@ -5,9 +5,9 @@ import Section from './Section'
 import SectionHeader from '../SectionHeader'
 
 class SectionGallery extends React.Component {
-  componentDidMount() {
-    console.log(this.props)
-  }
+  // componentDidMount() {
+  //   console.log(this.props)
+  // }
 
   render() {
   return (

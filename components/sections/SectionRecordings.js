@@ -22,7 +22,7 @@ class SectionListen extends React.Component {
             <SectionHeader text={this.props.title} id="recordings" />
             <div className="albums">
               {Object.values(this.props.recordings).map((recording, i) => (
-                <Recording key={recording._id} {...recording} />
+                <Recording key={recording._key} {...recording} />
               ))}
             </div>
           </Section>
