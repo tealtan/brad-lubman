@@ -34,7 +34,7 @@ class SectionEvents extends React.Component {
   setEvents = (response) => {
     const eventsArray = Object.values(this.props)
     this.setState({ events: eventsArray })
-    console.log(eventsArray)
+    // console.log(eventsArray)
   }
 
   render() {
@@ -45,9 +45,7 @@ class SectionEvents extends React.Component {
             <SectionHeader text="Events" id="events" />
             <div>
               {this.state.events.map((event) => (
-                <>
                   <Event key={event._id} {...event} />
-                </>
               ))}
             </div>
           </Section>
