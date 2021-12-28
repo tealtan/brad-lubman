@@ -12,7 +12,7 @@ import Footer from '../components/Footer'
 import client from '../sanityClient'
 
 export async function getStaticProps({ params }) {
-  const sectionsData = await client.getDocuments(['sectionAbout', 'sectionRecordings'])
+  const sectionsData = await client.getDocuments(['sectionAbout', 'sectionContact'])
   const eventsData = await client.fetch('*[_type == "event"] | order(date)')
 
   // Hacky way of separately including cover asset urls
@@ -36,11 +36,10 @@ export default function Index(response) {
       {/* <SectionAbout {...response.sectionsData} /> */}
       <SectionAbout {...response.sectionsData[0]} />
       <SectionEvents {...response.eventsData} />
-      {/* <SectionRecordings {...response.sectionsData[1]} /> */}
       <SectionRecordings {...response.sectionRecordings[0]} />
       <SectionVideos />
       <SectionGallery />
-      <Footer />
+      <Footer {...response.sectionsData[1]} />
 
       <style jsx global>{`
         @font-face {
