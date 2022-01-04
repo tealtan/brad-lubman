@@ -57,6 +57,10 @@ class SectionAbout extends React.Component {
               font-size: 18px;
               line-height: 28px;
             }
+
+            .sidebar {
+              width: 220px;
+            }
           }
         `}</style>
         <style global jsx>

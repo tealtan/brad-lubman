@@ -36,7 +36,8 @@ class SectionListen extends React.Component {
 
           .sidebar {
             float: right;
-            width: 125px !important;
+            margin: 22px 0 0 0;
+            width: 110px !important;
           }
 
           @media screen and (min-width: 1024px) {

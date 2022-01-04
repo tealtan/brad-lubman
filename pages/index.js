@@ -232,6 +232,9 @@ export default function Index(response) {
         /* Social Buttons */
 
         .socialButtons {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
           margin-bottom: 20px;
         }
 
@@ -241,12 +244,11 @@ export default function Index(response) {
         }
 
         .socialButtons a {
-          display: inline-block;
+          display: block;
           width: 50px;
           height: 50px;
           background-color: #000;
           border-radius: 25px;
-          margin-right: 10px;
         }
 
         .socialButtons a {
