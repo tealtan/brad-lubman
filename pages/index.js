@@ -14,6 +14,7 @@ import client from '../sanityClient'
 export async function getStaticProps({ params }) {
   const sectionsData = await client.getDocuments([
     'sectionAbout',
+    'sectionVideo',
     'sectionContact',
   ])
   const eventsData = await client.fetch('*[_type == "event"] | order(date)')
@@ -42,13 +43,12 @@ export default function Index(response) {
       <Meta />
 
       <SectionTop />
-      {/* <SectionAbout {...response.sectionsData} /> */}
       <SectionAbout {...response.sectionsData[0]} />
       <SectionEvents {...response.eventsData} />
       <SectionRecordings {...response.sectionRecordingsData[0]} />
-      <SectionVideos />
+      <SectionVideos {...response.sectionsData[1]} />
       <SectionGallery {...response.sectionGalleryData[0]} />
-      <Footer {...response.sectionsData[1]} />
+      <Footer {...response.sectionsData[2]} />
 
       <style jsx global>{`
         @font-face {

@@ -8,6 +8,7 @@ import blockContent from './blockContent'
 
 import sectionAbout from './sectionAbout'
 import sectionRecordings from './sectionRecordings'
+import sectionVideo from './sectionVideo'
 import sectionGallery from './sectionGallery'
 import sectionContact from './sectionContact'
 
@@ -26,6 +27,7 @@ export default createSchema({
 
     sectionAbout,
     sectionRecordings,
+    sectionVideo,
     sectionGallery,
     sectionContact,
 

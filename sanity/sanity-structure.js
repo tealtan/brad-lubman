@@ -11,6 +11,9 @@ export default () =>
         .title('Recordings Section')
         .child(S.editor().schemaType('sectionRecordings').documentId('sectionRecordings')),
       S.listItem()
+        .title('Video Section')
+        .child(S.editor().schemaType('sectionVideo').documentId('sectionVideo')),
+      S.listItem()
         .title('Gallery Section')
         .child(S.editor().schemaType('sectionGallery').documentId('sectionGallery')),
       S.listItem()
@@ -24,6 +27,7 @@ export default () =>
         .filter(listItem => ![
           'sectionAbout',
           'sectionRecordings',
+          'sectionVideo',
           'sectionGallery',
           'sectionContact',
         ]
