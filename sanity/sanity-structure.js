@@ -5,6 +5,9 @@ export default () =>
     .title('Content')
     .items([
       S.listItem()
+        .title('Top Section')
+        .child(S.editor().schemaType('sectionTop').documentId('sectionTop')),
+      S.listItem()
         .title('About Section')
         .child(S.editor().schemaType('sectionAbout').documentId('sectionAbout')),
       S.listItem()
@@ -25,6 +28,7 @@ export default () =>
       // List out the rest of the document types, but filter out the section types above
       ...S.documentTypeListItems()
         .filter(listItem => ![
+          'sectionTop',
           'sectionAbout',
           'sectionRecordings',
           'sectionVideo',

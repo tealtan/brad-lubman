@@ -19,6 +19,10 @@ export async function getStaticProps({ params }) {
   ])
   const eventsData = await client.fetch('*[_type == "event"] | order(date)')
 
+  const sectionTopData = await client.fetch(
+    '*[_type == "sectionTop"]{ ..., "backgroundImage": { "url": backgroundImage.asset->url } }'
+  )
+
   const sectionRecordingsData = await client.fetch(
     '*[_type == "sectionRecordings"]{ ..., "recordings": recordings[]{ ..., "cover": cover.asset->url } }'
   )
@@ -30,6 +34,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       sectionsData,
+      sectionTopData,
       sectionRecordingsData,
       sectionGalleryData,
       eventsData,
@@ -42,7 +47,7 @@ export default function Index(response) {
     <>
       <Meta />
 
-      <SectionTop />
+      <SectionTop {...response.sectionTopData[0]} />
       <SectionAbout {...response.sectionsData[0]} />
       <SectionEvents {...response.eventsData} />
       <SectionRecordings {...response.sectionRecordingsData[0]} />
@@ -100,6 +105,7 @@ export default function Index(response) {
         html {
           box-sizing: border-box;
           font-family: 'gtam-standard', 'Helvetica', sans-serif;
+          scroll-behavior: smooth;
         }
 
         .container {

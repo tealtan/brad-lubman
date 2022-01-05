@@ -6,12 +6,14 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './blockContent'
 
+import sectionTop from './sectionTop'
 import sectionAbout from './sectionAbout'
 import sectionRecordings from './sectionRecordings'
 import sectionVideo from './sectionVideo'
 import sectionGallery from './sectionGallery'
 import sectionContact from './sectionContact'
 
+import navLink from './navLink'
 import event from './event'
 import recording from './recording'
 import recordingLink from './recordingLink'
@@ -25,13 +27,12 @@ export default createSchema({
   types: schemaTypes.concat([
     blockContent,
 
+    sectionTop, navLink,
     sectionAbout,
-    sectionRecordings,
+    event,
+    sectionRecordings, recording, recordingLink,
     sectionVideo,
     sectionGallery,
     sectionContact,
-
-    event,
-    recording, recordingLink
   ]),
 })
