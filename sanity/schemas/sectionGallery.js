@@ -2,7 +2,7 @@ export default {
   name: 'sectionGallery',
   title: 'Section: Gallery',
   type: 'document',
-  __experimental_actions: ['create', 'update', 'delete', 'publish'],
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'title',
