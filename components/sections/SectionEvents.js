@@ -13,23 +13,23 @@ class SectionEvents extends React.Component {
     this.setEvents()
   }
 
-  fetchEventsFromCurrentSeason() {
-    var currentYear = new Date().getFullYear()
+  // fetchEventsFromCurrentSeason() {
+    // var currentYear = new Date().getFullYear()
     // return this.client.getEntries({
     //   content_type: 'events',
     //   'fields.date[gte]': currentYear - 1 + '-01-01T00:00:00Z',
     //   order: 'fields.date'
     // })
-  }
+  // }
 
-  fetchEventsFromYear = (year) => {
+  // fetchEventsFromYear = (year) => {
     // this.client.getEntries({
     //   content_type: 'events',
     //   'fields.date[lte]': year + 1 + '-01-01T00:00:00Z',
     //   'fields.date[gte]': year + '-01-01T00:00:00Z',
     //   order: 'fields.date'
     // })
-  }
+  // }
 
   setEvents = (response) => {
     const eventsArray = Object.values(this.props.eventsList)
