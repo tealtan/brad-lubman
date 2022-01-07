@@ -9,17 +9,17 @@ export default {
       title: 'Title',
       type: 'string',
     },
-	{
+  {
       name: 'backgroundImage',
       title: 'Background Image',
       type: 'image',
     },
-	{
+  {
       name: 'photoCredit',
       title: 'Photo Credit',
       type: 'string',
     },
-	{
+  {
       title: 'Links',
       name: 'links',
       type: 'array',
