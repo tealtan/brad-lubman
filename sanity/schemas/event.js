@@ -56,6 +56,15 @@ export default {
       type: 'url',
     },
   ],
+  orderings: [
+    {
+      title: 'Date',
+      name: 'dateDesc',
+      by: [
+        {field: 'date', direction: 'desc'}
+      ]
+    },
+  ],
   preview: {
     select: {
       title: 'title',

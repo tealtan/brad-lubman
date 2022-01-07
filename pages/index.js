@@ -14,10 +14,12 @@ import client from '../sanityClient'
 export async function getStaticProps({ params }) {
   const sectionsData = await client.getDocuments([
     'sectionAbout',
+    'sectionEvents',
     'sectionVideo',
     'sectionContact',
   ])
-  const eventsData = await client.fetch('*[_type == "event"] | order(date)')
+
+  const eventsData = await client.fetch('*[_type == "event" && date > "' + sectionsData[1].startDate + '"] | order(date)')
 
   const sectionTopData = await client.fetch(
     '*[_type == "sectionTop"]{ ..., "backgroundImage": { "url": backgroundImage.asset->url } }'
@@ -49,11 +51,11 @@ export default function Index(response) {
 
       <SectionTop {...response.sectionTopData[0]} />
       <SectionAbout {...response.sectionsData[0]} />
-      <SectionEvents {...response.eventsData} />
+      <SectionEvents {...response.eventsData} {...response.sectionsData[1]} />
       <SectionRecordings {...response.sectionRecordingsData[0]} />
-      <SectionVideos {...response.sectionsData[1]} />
+      <SectionVideos {...response.sectionsData[2]} />
       <SectionGallery {...response.sectionGalleryData[0]} />
-      <Footer {...response.sectionsData[2]} />
+      <Footer {...response.sectionsData[3]} />
 
       <style jsx global>{`
         @font-face {

@@ -8,6 +8,7 @@ import blockContent from './blockContent'
 
 import sectionTop from './sectionTop'
 import sectionAbout from './sectionAbout'
+import sectionEvents from './sectionEvents'
 import sectionRecordings from './sectionRecordings'
 import sectionVideo from './sectionVideo'
 import sectionGallery from './sectionGallery'
@@ -29,7 +30,7 @@ export default createSchema({
 
     sectionTop, navLink,
     sectionAbout,
-    event,
+    sectionEvents, event,
     sectionRecordings, recording, recordingLink,
     sectionVideo,
     sectionGallery,
