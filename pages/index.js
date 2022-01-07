@@ -55,7 +55,10 @@ export default function Index(response) {
 
       <SectionTop {...response.sectionTopData[0]} />
       <SectionAbout {...response.sectionsData[0]} />
-      <SectionEvents eventsList={response.eventsData} {...response.sectionsData[1]} />
+      <SectionEvents
+        eventsList={response.eventsData}
+        {...response.sectionsData[1]}
+      />
       <SectionRecordings {...response.sectionRecordingsData[0]} />
       <SectionVideos {...response.sectionsData[2]} />
       <SectionGallery {...response.sectionGalleryData[0]} />
