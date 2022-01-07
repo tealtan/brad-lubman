@@ -20,7 +20,7 @@ export default () =>
         .title('Video Section')
         .child(S.editor().schemaType('sectionVideo').documentId('sectionVideo')),
       S.listItem()
-        .title('Gallery Section')
+        .title('Photos Section')
         .child(S.editor().schemaType('sectionGallery').documentId('sectionGallery')),
       S.listItem()
         .title('Contact Section')
