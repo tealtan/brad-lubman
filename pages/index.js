@@ -19,7 +19,11 @@ export async function getStaticProps({ params }) {
     'sectionContact',
   ])
 
-  const eventsData = await client.fetch('*[_type == "event" && date > "' + sectionsData[1].startDate + '"] | order(date)')
+  const eventsData = await client.fetch(
+    '*[_type == "event" && date > "' +
+      sectionsData[1].startDate +
+      '"] | order(date)'
+  )
 
   const sectionTopData = await client.fetch(
     '*[_type == "sectionTop"]{ ..., "backgroundImage": { "url": backgroundImage.asset->url } }'

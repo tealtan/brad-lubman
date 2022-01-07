@@ -58,8 +58,13 @@ class Event extends React.Component {
               {this.props.dateString || formatDate(this.props.date)}
             </span>
             <div className="eventHeadline">
-              <div className="eventName">{this.props.title} • {this.props.location}</div>
-              <div className="eventEnsemble" dangerouslySetInnerHTML={{ __html: this.props.ensemble }}></div>
+              <div className="eventName">
+                {this.props.title} • {this.props.location}
+              </div>
+              <div
+                className="eventEnsemble"
+                dangerouslySetInnerHTML={{ __html: this.props.ensemble }}
+              ></div>
             </div>
             <div
               className={`drawerToggle ${

@@ -28,9 +28,7 @@ class SectionTop extends React.Component {
             <ul id="mainNav">
               {Object.values(this.props.links).map((navLink) => (
                 <li key={navLink._key}>
-                  <a href={navLink.linkUrl}>
-                    {navLink.linkText}
-                  </a>
+                  <a href={navLink.linkUrl}>{navLink.linkText}</a>
                 </li>
               ))}
             </ul>
