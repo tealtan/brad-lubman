@@ -19,7 +19,12 @@ class SectionGallery extends React.Component {
               <div className="galleryWindow">
                 <div className="galleryContainer">
                   {Object.values(this.props.images).map((image) => (
-                    <img loading="lazy" alt="" key={image._key} src={image.url + "?h=420&auto=format&q=75"} />
+                    <img
+                      loading="lazy"
+                      alt=""
+                      key={image._key}
+                      src={image.url + '?h=420&auto=format&q=75'}
+                    />
                   ))}
                 </div>
               </div>
