@@ -69,10 +69,8 @@ export default function Index(response) {
           font-family: 'gtam-standard';
           font-style: normal;
           font-weight: 400;
-          src: url('/fonts/GT-America-Standard-Regular.woff2')
-              format('woff2'),
-            url('/fonts/GT-America-Standard-Regular.woff')
-              format('woff');
+          src: url('/fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+            url('/fonts/GT-America-Standard-Regular.woff') format('woff');
           font-display: swap;
         }
 
@@ -82,8 +80,7 @@ export default function Index(response) {
           font-weight: 400;
           src: url('/fonts/GT-America-Standard-Regular-Italic.woff2')
               format('woff2'),
-            url('/fonts/GT-America-Standard-Regular-Italic.woff')
-              format('woff');
+            url('/fonts/GT-America-Standard-Regular-Italic.woff') format('woff');
           font-display: swap;
         }
 
@@ -91,19 +88,15 @@ export default function Index(response) {
           font-family: 'gtam-standard';
           font-style: normal;
           font-weight: 700;
-          src: url('/fonts/GT-America-Standard-Bold.woff2')
-              format('woff2'),
-            url('/fonts/GT-America-Standard-Bold.woff')
-              format('woff');
+          src: url('/fonts/GT-America-Standard-Bold.woff2') format('woff2'),
+            url('/fonts/GT-America-Standard-Bold.woff') format('woff');
           font-display: swap;
         }
 
         @font-face {
           font-family: 'gtam-compressed';
-          src: url('/fonts/GT-America-Compressed-Bold.woff2')
-              format('woff2'),
-            url('/fonts/GT-America-Compressed-Bold.woff')
-              format('woff');
+          src: url('/fonts/GT-America-Compressed-Bold.woff2') format('woff2'),
+            url('/fonts/GT-America-Compressed-Bold.woff') format('woff');
           font-display: swap;
         }
 
