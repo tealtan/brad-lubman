@@ -14,7 +14,7 @@ class SectionTop extends React.Component {
           <div
             className="coverImage"
             style={{
-              backgroundImage: "url('" + this.props.backgroundImage.url + "')",
+              backgroundImage: "url('" + this.props.backgroundImage.url + "?w=1400&auto=format&q=75" + "')",
             }}
           >
             <Container>

@@ -9,7 +9,7 @@ class Recording extends React.Component {
     return (
       <>
         <div className="album">
-          <img alt={this.props.title} src={this.props.cover} />
+          <img loading="lazy" alt={this.props.title} src={this.props.cover + "?h=300&w=300&auto=format&q=75"} />
           <div className="albumLinks">
             {Object.values(this.props.links).map((recording) => (
               <a key={recording._key} href={recording.linkUrl}>
