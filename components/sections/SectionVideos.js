@@ -17,7 +17,7 @@ class SectionVideos extends React.Component {
             <SectionHeader text={this.props.title} id="video" />
             <div
               className="videos"
-              dangerouslySetInnerHTML={{ __html: this.props.embeds }}
+              dangerouslySetInnerHTML={{ __html: this.props.embeds.replaceAll("<iframe ", "<iframe title='' loading='' ") }}
             ></div>
           </Section>
         </Container>
