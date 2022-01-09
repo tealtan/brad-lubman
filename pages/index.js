@@ -69,38 +69,42 @@ export default function Index(response) {
           font-family: 'gtam-standard';
           font-style: normal;
           font-weight: 400;
-          src: url('https://assets.ctfassets.net/8730t1z03k68/5UuLWhEaVGmu2wAcqEUmO4/52bc75bc5051da07af51a0784efeab45/GT-America-Standard-Regular.woff2')
+          src: url('/fonts/GT-America-Standard-Regular.woff2')
               format('woff2'),
-            url('https://assets.ctfassets.net/8730t1z03k68/4dhw81TmQ0ci8IAMkS8MOk/9f0af9bb1b638f8474f503f761dec99c/GT-America-Standard-Regular.woff')
+            url('/fonts/GT-America-Standard-Regular.woff')
               format('woff');
+          font-display: swap;
         }
 
         @font-face {
           font-family: 'gtam-standard';
           font-style: italic;
           font-weight: 400;
-          src: url('https://assets.ctfassets.net/8730t1z03k68/4C3e4Tlo9quaScCmioeg4G/5a00f2c22946ef04060fbe1bd5f2c7f0/GT-America-Standard-Regular-Italic.woff2')
+          src: url('/fonts/GT-America-Standard-Regular-Italic.woff2')
               format('woff2'),
-            url('https://assets.ctfassets.net/8730t1z03k68/5HtnrU62K4QscGiooqkosW/4f093c643d898adfe2f13d76a40cd5a1/GT-America-Standard-Regular-Italic.woff')
+            url('/fonts/GT-America-Standard-Regular-Italic.woff')
               format('woff');
+          font-display: swap;
         }
 
         @font-face {
           font-family: 'gtam-standard';
           font-style: normal;
           font-weight: 700;
-          src: url('https://assets.ctfassets.net/8730t1z03k68/1GFfjtS8FCGEu4OUAi4Ssu/0306ff68403972e4c564d26e02d32ad0/GT-America-Standard-Bold.woff2')
+          src: url('/fonts/GT-America-Standard-Bold.woff2')
               format('woff2'),
-            url('https://assets.ctfassets.net/8730t1z03k68/4dDqXVuU5WoQiQCmCwqQK8/4530e71ffb630392e08d89a585833efc/GT-America-Standard-Bold.woff')
+            url('/fonts/GT-America-Standard-Bold.woff')
               format('woff');
+          font-display: swap;
         }
 
         @font-face {
           font-family: 'gtam-compressed';
-          src: url('https://assets.ctfassets.net/8730t1z03k68/1VE5VGgpkcgM0ciwg8G4Yw/2ff7d829803668feb1523bdd7acf5225/GT-America-Compressed-Bold.woff2')
+          src: url('/fonts/GT-America-Compressed-Bold.woff2')
               format('woff2'),
-            url('https://assets.ctfassets.net/8730t1z03k68/5tdCDoy6uQ2KSkYOqEoOYg/92af9e9fd0af39ae0ef572f4d6bd626b/GT-America-Compressed-Bold.woff')
+            url('/fonts/GT-America-Compressed-Bold.woff')
               format('woff');
+          font-display: swap;
         }
 
         *,
