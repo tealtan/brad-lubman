@@ -31,6 +31,7 @@ export default {
       name: 'ensemble',
       title: 'Ensemble',
       type: 'string',
+      description: 'Multiple lines: add <br> to separate lines.',
       validation: Rule => Rule.required()
     },
     {
@@ -49,6 +50,7 @@ export default {
       name: 'description',
       title: 'Description',
       type: 'blockContent',
+      description: 'Hit enter to start a new line. Hit enter twice for a blank line.',
     },
     {
       name: 'url',
