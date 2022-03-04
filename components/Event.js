@@ -1,0 +1,207 @@
+import React from 'react'
+import BlockContent from '@sanity/block-content-to-react'
+
+function formatDate(date) {
+  if (!date) {
+    return null
+  }
+
+  const monthNames = [
+    'Jan.',
+    'Feb.',
+    'Mar.',
+    'Apr.',
+    'May',
+    'June',
+    'July',
+    'Aug.',
+    'Sep.',
+    'Oct.',
+    'Nov.',
+    'Dec.',
+  ]
+  const month = monthNames[Number(date.substr(5, 2)) - 1]
+  const day = Number(date.substr(8, 2))
+  const year = date.substr(0, 4)
+  return month + ' ' + day + ', ' + year
+}
+
+class Event extends React.Component {
+  state = {
+    events: [],
+    drawerHidden: true,
+  }
+
+  componentDidMount() {
+    // this.fetchEventsFromCurrentSeason().then(this.setEvents)
+    // console.log(this.props)
+  }
+
+  toggleDrawer() {
+    this.setState({
+      drawerHidden: !this.state.drawerHidden,
+    })
+    console.log(this.state.drawerHidden)
+  }
+
+  render() {
+    return (
+      <>
+        <div
+          className={`event drawer ${
+            this.state.drawerHidden ? 'drawerClosed' : ''
+          }`}
+          onClick={this.toggleDrawer.bind(this)}
+        >
+          <div className="eventHead">
+            <span className="eventDate">
+              {this.props.dateString || formatDate(this.props.date)}
+            </span>
+            <div className="eventHeadline">
+              <div className="eventName">
+                {this.props.title} • {this.props.location}
+              </div>
+              <div
+                className="eventEnsemble"
+                dangerouslySetInnerHTML={{ __html: this.props.ensemble }}
+              ></div>
+            </div>
+            <div
+              className={`drawerToggle ${
+                this.state.drawerHidden ? 'drawerClosed' : ''
+              }`}
+            />
+          </div>
+          {!this.state.drawerHidden && (
+            <div className="eventDetails drawerContents">
+              <BlockContent
+                blocks={this.props.description}
+                imageOptions={{ w: 750, fit: 'max' }}
+              />
+              {this.props.url && (
+                <p>
+                  <a href={this.props.url}>Learn More</a>
+                </p>
+              )}
+            </div>
+          )}
+        </div>
+
+        <style jsx>{`
+          .event {
+            position: relative;
+            padding: 10px 0 14px 0;
+            border-top: 3px solid #000;
+            font-size: 18px;
+            line-height: 28px;
+          }
+
+          @media screen and (max-width: 720px) {
+            .event {
+              font-size: 16px;
+              line-height: 24px;
+            }
+
+            .eventDate,
+            .eventHeadline {
+              display: block;
+              width: calc(100% - 70px);
+            }
+
+            .eventDate {
+              font-size: 11px;
+              text-transform: uppercase;
+            }
+
+            .eventName {
+              line-height: 18px;
+              margin: 0 0 5px 0;
+            }
+
+            .eventLocation {
+              font-size: 14px;
+              line-height: 16px;
+            }
+          }
+
+          .eventName {
+            display: block;
+            font-weight: 700;
+          }
+
+          .eventDetails a {
+            display: block;
+            color: #ff0058;
+          }
+
+          .event .drawerToggle {
+            float: none;
+            position: absolute;
+            top: 30px;
+            right: 15px;
+            background: url('/images/icon-plus-black@2x.png');
+            background-size: 100%;
+          }
+
+          .event .eventDetails {
+            margin-top: 15px;
+          }
+
+          @media screen and (min-width: 1024px) {
+            .event {
+              padding: 20px 0 17px 0;
+            }
+
+            .eventHead {
+              display: flex;
+            }
+
+            .eventDate {
+              flex: 0 0 200px;
+            }
+
+            .eventHeadline {
+              flex: 0 0 735px;
+            }
+
+            .eventName {
+              display: inline;
+              margin-right: 10px;
+            }
+
+            .eventDetails {
+              margin-left: 200px;
+            }
+
+            .event .drawerToggle {
+              position: static;
+              flex-basis: 50px;
+              margin: -13px 0px -15px 0;
+            }
+
+            .event .eventDetails {
+              margin-top: 30px;
+              margin-bottom: 30px;
+            }
+          }
+        `}</style>
+        <style global jsx>
+          {`
+            .event .eventDetails p {
+              margin-bottom: 0.3em;
+            }
+            .event .eventDetails p:empty {
+              margin-bottom: 1.5em;
+            }
+            .event .eventDetails p a {
+              display: block;
+              margin-top: 1.5em;
+            }
+          `}
+        </style>
+      </>
+    )
+  }
+}
+
+export default Event

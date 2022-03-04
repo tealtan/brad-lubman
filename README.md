@@ -1,3 +1,0 @@
-# brad-lubman
-
-Test
