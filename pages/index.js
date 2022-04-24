@@ -45,6 +45,7 @@ export async function getStaticProps({ params }) {
       sectionGalleryData,
       eventsData,
     },
+    revalidate: 60, // regenerate page every 1 min
   }
 }
 
