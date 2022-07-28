@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "16.11.1"
+  },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.23.2",
