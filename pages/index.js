@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Meta from '../components/Meta'
+
 import SectionTop from '../components/sections/SectionTop'
 import SectionAbout from '../components/sections/SectionAbout'
 import SectionEvents from '../components/sections/SectionEvents'
