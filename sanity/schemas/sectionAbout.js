@@ -2,7 +2,6 @@ export default {
   name: 'sectionAbout',
   title: 'Section: About',
   type: 'document',
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'title',
@@ -16,6 +15,7 @@ export default {
     },
     {
       name: 'sidebar',
+      description: 'Uses HTML. Contact Allen for edits.',
       title: 'Sidebar',
       type: 'text',
     },

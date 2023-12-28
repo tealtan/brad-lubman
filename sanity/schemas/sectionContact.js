@@ -2,7 +2,6 @@ export default {
   name: 'sectionContact',
   title: 'Section: Contact',
   type: 'document',
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'title',
@@ -27,6 +26,7 @@ export default {
     {
       name: 'formEmbed',
       title: 'Form Embed',
+      description: 'Uses HTML. Contact Allen for edits.',
       type: 'text',
     },
   ],
